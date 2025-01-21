@@ -1,0 +1,338 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+/* Preclasses Section */
+:root {
+    --primary-color: #050B20;
+    --primary-color-rgb: 5, 11, 32;
+    --secondary-color: #405FF2;
+    --secondary-color-rgb: 64, 95, 242;
+    --ternary-color: #3D923A;
+    --ternary-color-rgb: 61, 146, 58;
+    --white: #fff;
+    --white-rgb: 255, 255, 255;
+    --black: #000;
+    --black-rgb: 0, 0, 0;
+    --text-primary: 'DM Sans';
+    --fw: 400;
+    --fs: 16px;
+    --lh: 1.5;
+    --gw: 15px;
+}
+::selection {
+    color: var(--white);
+    background: var(--primary-color);
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    color: var(--black);
+    font-family: var(--text-primary);
+    font-size: var(--fs);
+    font-weight: var(--fw);
+    line-height: var(--lh);
+}
+.container {
+    max-width: 1320px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--gw);
+    padding-right: var(--gw);
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc(-1 * var(--gw));
+    margin-right: calc(-1 * var(--gw));
+}
+img {
+    display: block;
+    max-width: 100%;
+}
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+}
+a {
+    color: var(--black);
+    text-decoration: none;
+}
+h1 {
+    font-size: 70px;
+}
+h2 {
+    font-size: 40px;
+}
+h4 {
+    font-size: 16px;
+}
+h5 {
+    font-size: 15px;
+}
+h6 {
+    font-size: 14px;
+}
+p {
+    font-size: 18px;
+}
+.col-1 {
+    width: 8.3333%;
+}
+.col-2 {
+    width: 16.6666%;
+}
+.col-3 {
+    width: 25%;
+}
+.col-4 {
+    width: 33.3333%;
+}
+.col-5 {
+    width: 41.6666%;
+}
+.col-6 {
+    width: 50%;
+}
+.col-7 {
+    width: 58.3333%;
+}
+.col-8 {
+    width: 66.6666%;
+}
+.col-9 {
+    width: 75%;
+}
+.col-10 {
+    width: 83.3333%;
+}
+.col-11 {
+    width: 91.6666%;
+}
+.col-12 {
+    width: 100%;
+}
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+    padding-left: var(--gw);
+    padding-right: var(--gw);
+}
+.justify-start {
+    justify-content: flex-start;
+}
+.justify-center {
+    justify-content: center;
+}
+.justify-between {
+    justify-content: space-between;
+}
+.justify-around {
+    justify-content: space-around;
+}
+.justify-evenly {
+    justify-content: space-evenly;
+}
+.justify-end {
+    justify-content: flex-end;
+}
+.items-start {
+    align-items: flex-start;
+}
+.items-center {
+    align-items: center;
+}
+.items-end {
+    align-items: flex-end;
+}
+.text-center {
+    text-align: center;
+}
+.text-right {
+    text-align: right;
+}
+.text-white {
+    color: var(--white);
+}
+.justify-items-center {
+    justify-items: center;
+}
+.py-120 {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+.text-secondary {
+    color: var(--secondary-color);
+}
+.mb-20{
+    margin-bottom: 20px;
+}
+.mb-30{
+    margin-bottom: 30px;
+}
+/* Header Section */
+header {
+    width: 100%;
+    position: absolute;
+    z-index: 99;
+    padding: 25px 0;
+    border-bottom: 1px solid rgba(var(--white-rgb), 0.25);
+}
+nav a {
+    color: var(--white);
+    margin: 0 25px;
+    transition: all 0.5s;
+}
+nav a:hover {
+    color: rgb(var(--primary-color), 0.1);
+}
+.sign-in-btn i {
+    margin-right: 5px;
+}
+.submit-btn {
+    border: 1px solid var(--white);
+    padding: 10px 15px;
+    border-radius: 25px;
+    transition: all 0.5s;
+}
+.submit-btn:hover {
+    border: 1px solid var(--white);
+    background-color: var(--white);
+    color: var(--black);
+}
+/* Banner Section */
+.banner {
+    position: relative;
+    background-image: url('../img/banner/banner-bg.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 250px 0;
+    color: var(--white);
+}
+.petrol a, .miles a, .automatic a {
+    color: var(--white);
+    margin-left: 20px;
+}
+.petrol a:hover, .miles a:hover, .automatic a:hover {
+    text-decoration: underline;
+}
+.tabpanel {
+    margin-bottom: 45px;
+}
+.banner-btn {
+    background-color: var(--white);
+    padding: 15px 25px;
+    border-radius: 15px;
+    border: 1px solid var(--white);
+    transition: all 0.5s;
+}
+.banner-btn:hover {
+    color: var(--white);
+    border: 1px solid var(--white);
+    background-color: transparent;
+}
+.left, .right {
+    position: absolute;
+    background-color: var(--white);
+    padding: 0px 25px;
+    color: var(--primary-color);
+    font-size: 30px;
+    border-radius: 80px;
+    top: 50%;
+}
+.left {
+    left: 25px;
+}
+.right {
+    right: 25px;
+}
+/* Category Section */
+.category {
+    margin-top: 50px;
+}
+.category img {
+    margin-bottom: 35px;
+}
+/* Explore Vehicles Section */
+.tablist a {
+    padding: 25px 25px 15px;
+}
+.selected {
+    border-bottom: 3px solid var(--secondary-color);
+}
+.card {
+    box-shadow: 0 0 10px -4px var(--black);
+    border-radius: 25px;
+    margin-top: 50px;
+    transition: all 0.5s;
+}
+.card:hover {
+    transform: scale(1.05);
+}
+.car-img img {
+    border-radius: 25px 25px 0 0;
+}
+.car-detail {
+    padding: 25px;
+}
+.car-name h6 {
+    font-size: 13px;
+    font-weight: 300;
+}
+.feature {
+    padding: 25px 15px;
+}
+.feature a {
+    color: var(--primary-color);
+}
+.feature a i {
+    display: block;
+}
+.other-detail {
+    padding: 0 15px;
+}
+.adv-btn {
+    margin-top: 50px;
+    padding: 10px 25px;
+    background-color: var(--black);
+    color: var(--white);
+    border: 1px solid var(--black);
+    border-radius: 15px;
+    transition: all 0.5s;
+}
+.adv-btn:hover {
+    background-color: transparent;
+    color: var(--black);
+}
+/* Choose Us Section */
+.choose-heading{
+    margin-bottom: 45px;
+}
+.choose-img{
+    margin-bottom: 30px;
+} 
+.choose-name, .choose-info{
+    margin-bottom: 25px;
+}
+/* Special Section */
+.special{
+    position: relative;
+}
+.special-left, .special-right{
+    margin-top: 25px;
+    position: absolute;
+    border: 1px solid var(--primary-color);
+    padding: 10px 30px;
+    border-radius: 15px;
+}
+.special-left{
+    left: 130px;
+}
+.special-right{
+    left: 230px;
+}
+.special-left:hover, .special-right:hover{
+    background-color: var(--primary-color);
+    color: var(--white);
+}
