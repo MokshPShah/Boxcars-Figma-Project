@@ -269,6 +269,7 @@ nav a:hover {
     border-bottom: 3px solid var(--secondary-color);
 }
 .card, .review-card {
+    position: relative;
     background-color: var(--white);
     box-shadow: 0 0 10px -4px var(--black);
     border-radius: 25px;
@@ -277,6 +278,30 @@ nav a:hover {
 }
 .card:hover, .review-card:hover {
     transform: scale(1.05);
+}
+.deal-green, .deal-blue{
+    position: absolute;
+    z-index: 99;
+    top: 15px;
+    left: 20px;
+    background-color: var(--ternary-color);
+    color: var(--white);
+    padding: 1px 10px;
+    border-radius: 25px;
+}
+.deal-blue{
+    background-color: var(--secondary-color);
+    color: var(--white);
+}
+.bookmark-icon a{
+    position: absolute;
+    z-index: 99;
+    top: 15px;
+    right: 20px;
+    background-color: var(--white);
+    color: var(--primary-color);
+    padding: 3px 6px 0;
+    border-radius: 25px;
 }
 .car-img img {
     border-radius: 25px 25px 0 0;
@@ -327,24 +352,24 @@ nav a:hover {
     margin-bottom: 25px;
 }
 /* Special Section */
-.special {
+.special .container{
     position: relative;
 }
-.special-left, .special-right {
-    margin-top: 25px;
+.special-left a, .special-right a {
     position: absolute;
+    margin-top: 25px;
     border: 1px solid var(--primary-color);
     padding: 10px 30px;
     border-radius: 15px;
-    color: var(--white);
+    transition: all 0.5s;
 }
-.special-left {
+.special-left a {
+    left: 30px;
+}
+.special-right a {
     left: 130px;
 }
-.special-right {
-    left: 230px;
-}
-.special-left:hover, .special-right:hover {
+.special-left a:hover, .special-right a:hover {
     background-color: var(--primary-color);
     color: var(--white);
 }
